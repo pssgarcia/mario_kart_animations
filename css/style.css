@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+}
+
+figure {
+  position: relative;
+  display: flex;
+}
+
+.sky {
+  background-color: deepskyblue;
+  height: 35vh;
+}
+
+.road > img {
+  width: 7%;
+  animation-name: run;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+
+.grass {
+  background-color: green;
+  height: 30vh;
+}
+
+.road {
+  background-color: dimgray;
+  border-top: 2px solid gray;
+  height: 35vh;
+}
+
+figcaption {
+  border-top: 5px dashed white;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+[alt="sun"] {
+  width: 5%;
+  right: 5%;
+  top: 5%;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+[alt*="cloud"] {
+  width: 10%;
+  animation-name: wind;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+[alt="cloud-1"] {
+  right: 30%;
+  top: 10%;
+  animation-duration: 8s;
+  animation-delay: .0s;
+}
+
+[alt="cloud-2"] {
+  top: 30%;
+  right: 15%;
+  animation-duration: 7.5s;
+}
+
+[alt="cloud-3"] {
+  top: 50%;
+  right: 40%;
+  animation-duration: 7.5s;
+  z-index: 4;
+}
+
+[alt*="cactus"] {
+  animation-name: landscape;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  width: 6%;
+}
+
+[alt="lakito"] {
+  width: 10%;
+  z-index: 3;
+  top: 5%;
+  right: 20%;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate-reverse;
+}
+
+[alt="cactus-1"] {
+  top: 5%;
+  left: 15%;
+  animation-duration: 7.5s;
+  animation-delay: .3s;
+}
+
+[alt="cactus-2"] {
+  top: 15%;
+  left: 30%;
+  animation-duration: 7.5s;
+}
+
+[alt="cactus-3"] {
+  top: 20%;
+  left: 45%;
+  animation-duration: 8s;
+}
+
+[alt="cactus-4"] {
+  top: 25%;
+  left: 60%;
+  animation-duration: 8.5s;
+}
+
+[alt="cactus-5"] {
+  top: 30%;
+  left: 75%;
+  animation-duration: 9s;
+  z-index: 3;
+}
+
+[alt="koopa-jr"],
+[alt="toad"] {
+  top: 40%;
+}
+
+[alt="mario"],
+[alt="bowser"] {
+  bottom: 50%;
+}
+
+[alt="mario"] {
+  animation-duration: 3.95s;
+}
+
+[alt="toad"] {
+  animation-duration: 4s;
+}
+
+[alt="koopa-jr"] {
+  animation-duration: 5s;
+}
+
+[alt="bowser"] {
+  animation-duration: 8s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wind {
+  from {
+    transform: translate(-1000px);
+  }
+
+  to {
+    transform: translate(1500px);
+  }
+}
+
+@keyframes landscape {
+  from {
+    transform: translate(-1000px);
+  }
+
+  to {
+    transform: translate(1500px);
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translate(20%,-15vh);
+  }
+
+  50% {
+    transform: translate(50%,10vh);
+  }
+
+  100% {
+    transform: translate(70%,-15vh);
+  }
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(1500px);
+  }
+}
